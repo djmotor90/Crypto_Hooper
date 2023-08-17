@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Crypto Trooper</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favico/cryptofavico.ico">
+</head> 
+
+<body class="start-screen">
+  
+        <!-- Main Page START -->
+        <main id="landing-screen" class="landing-screen-background">
+            <button id="start-button">Start</button>
+        </main>
+        <!-- End of Main page -->
+
+        <!-- Start of the login page -->
+    <main id="start-screen" class="start-screen-background">
+        <div class="button-container">
+            <img id="start-gif" src="./assets/Background/Crypto Trooper.gif" alt="Logo in gif">
+            <button id="new-game-button">New Game</button>
+            <button id="load-game-button">Load Game</button>
+        </div>
+        
+        <button id="mute-button">Mute</button>
+        <audio id="bg-music-login" src="./assets/Music/Interstellar Mood - Nico Staf.mp3" loop autoplay> 
+                    Your browser does not support the audio element.
+        </audio>
+        <audio id="bg-music-game" src="./assets/Music/The Inner Sound - Jesse Gallagher.mp3" loop autoplay>
+                    Your browser does not support the audio element.
+        </audio>
+
+    </main>
+        <!-- End of the login page -->
+
+        <!-- Game Start -->
+    <main id="game-screen">
+        <header>
+            <img id="logo" src="./assets/Background/Crypto Trooper.gif" alt="Logo in gif">
+        </header> 
+        <img id="house-image" src="./assets/House/cryptohouse1.png" alt="Crypto House">
+        <button id="mute-button-game">Mute</button>   <!-- Mute button top right corner -->
+        <h2 id="sid-display"></h2>
+        
+        <button id="show-stats-btn">Show Player Stats</button>
+        <div id="player-dashboard-modal" class="modal"><!-- This function was generated with assistance from ChatGPT by OpenAI -->
+            <div class="modal-content"> <!--  //https://www.w3schools.com/w3css/w3css_modal.asp-->
+                <span class="close">&times;</span>
+                <h2>Player Stats</h2>
+                <ul>
+                <li>Balance: $<span id="player-cash">50000</span></li>
+                <li><button class="sell-btn" data-crypto="btc">Sell</button> Bitcoin (BTC): <span id="player-btc">0</span></li>              
+                <li><button class="sell-btn" data-crypto="eth">Sell</button> Ethereum (ETH): <span id="player-eth">0</span></li>
+                <li><button class="sell-btn" data-crypto="ltc">Sell</button> Litecoin (LTC): <span id="player-ltc">0</span></li>
+                <li><button class="sell-btn" data-crypto="bch">Sell</button> Bitcoin Cash (BCH): <span id="player-bch">0</span></li>
+                <li><button class="sell-btn" data-crypto="xmr">Sell</button> Monero (XMR): <span id="player-xmr">0</span></li>
+                <li><button class="sell-btn" data-crypto="dash">Sell</button> Dash (DASH): <span id="player-dash">0</span></li>
+                <li><button class="sell-btn" data-crypto="zec">Sell</button> Zcash (ZEC): <span id="player-zec">0</span></li>
+                <li><button class="sell-btn" data-crypto="etc">Sell</button> Ethereum Classic (ETC): <span id="player-etc">0</span></li>
+                <li><button class="sell-btn" data-crypto="neo">Sell</button> NEO (NEO): <span id="player-neo">0</span></li>
+
+            </ul>
+            <label for="crypto-selection">Currently Mining:</label>
+            <select id="crypto-selection"></select>
+
+            <div id="player-purchased-items">
+                <h3>Purchased Items:</h3>
+                <ul id="purchased-items-list"></ul>
+            </div>
+        </div>
+    </div>
+        <!-- Market Info Modal | This function was generated with assistance from ChatGPT by OpenAI -->
+        <div id="market-info-modal" class="modal">
+         <div class="modal-content"> <!--  //https://www.w3schools.com/w3css/w3css_modal.asp-->
+            <span class="close">&times;</span>
+                <h2>Market Info</h2>
+                    <ul id="market-list"></ul>
+                        <p id="update-time"></p>
+        </div>
+        </div>
+                <button id="show-market-info-btn">Market Info</button>
+    
+
+    <!-- Shop Modal | This function was generated with assistance from ChatGPT by OpenAI -->
+<div id="shop-modal" class="modal">
+    <div class="modal-content"> <!--  //https://www.w3schools.com/w3css/w3css_modal.asp-->
+        <span class="close">&times;</span>
+        <h2>Shop</h2>
+        
+        <!-- Tabs or sections for the shop -->
+        <div class="shop-sections">
+            <button onclick="showMiningRigs()">Mining Rigs</button>
+            <button onclick="showEnergyManagement()">Energy Management</button>
+            <button onclick="showCoolingUnits()">Cooling Management</button>
+            <button onclick="showRigUpgrades()">Upgrades</button>
+        </div>
+        
+        <!-- Content for Mining Rigs -->
+        <div id="mining-rigs-list" class="shop-content">
+        </div>
+        
+        <!-- Content for Energy Management -->
+        <div id="energy-management-list" class="shop-content">
+        </div>
+
+            <!-- Cooling Management -->
+        <div id="cooling-units-list" class="shop-content">
+        </div>
+
+            <!-- Upgrade List -->
+        <div id="upgrade-list" class="shop-content">
+        </div>
+    </div>
+</div>
+<button id="show-shop-btn">Open Shop</button>
+    </main>
+        <!-- End of the player-info section -->
+        
+        
+        <!-- Game END -->
+
+        <footer class="footer">
+            <p>© Crypto Trooper</p>
+        </footer>
+            <!-- Footer End -->
+
+        <!-- JavaScript link -->
+        <script src="array.js"></script>
+    <script src="app.js"></script>
+        <!-- End of JS -->
+
+         <!-- Footer Start -->
+
+</body>
+
+
+
+</html>
